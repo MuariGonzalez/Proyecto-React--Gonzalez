@@ -1,21 +1,28 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import CardWidget from "../CarWidget/CardWidget"
+import CardWidget from "../CarWidget/CardWidget";
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <Navbar bg="primary" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">Afrodita SexShop</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Lenceria</Nav.Link>
-                    <Nav.Link href="#features">Juguetes</Nav.Link>
-                    <Nav.Link href="#pricing">Vibradores</Nav.Link>
-                </Nav>
-                <CardWidget/>
-            </Container>
-        </Navbar>
+        
+            <Navbar bg="primary" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">
+                        <Link to="/">
+                            Afrodita SexShop
+                        </Link>
+                    </Navbar.Brand>
+                    <Nav className="me-auto">
+                        <NavLink to="/categoria/1">Lenceria</NavLink>
+                        <NavLink to="/categoria/2">Juguetes</NavLink>
+                        <NavLink to="/categoria/3">Vibradores</NavLink>
+                    </Nav>
+                    <CardWidget />
+                </Container>
+            </Navbar>
+        
     )
 }
 
