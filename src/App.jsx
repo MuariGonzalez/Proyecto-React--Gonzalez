@@ -1,6 +1,6 @@
 import NavBar from "./componentes/navbar/NavBar";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
-import CardsProductos from "./componentes/Cards/CardsProductos";
+//import CardsProductos from "./componentes/Item/CardsProductos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
