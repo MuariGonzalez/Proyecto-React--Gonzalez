@@ -7,10 +7,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar bg="primary" variant="dark">
-      <Container>
+    <Navbar bg="primary" variant="light">
+      <Container className='nav'>
         <Navbar.Brand>
-          <Link to="/">Afrodita SexShop</Link>
+          <Link className='' to="/">Afrodita SexShop</Link>
         </Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to="/categoria/lenceria">Lenceria</NavLink>

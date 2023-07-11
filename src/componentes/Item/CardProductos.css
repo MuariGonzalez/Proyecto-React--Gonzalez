@@ -1,0 +1,6 @@
+.cardStile{
+    display: flex;
+    display: inline-block;
+    border: 1px lightseagreen solid;
+    margin: 40px;
+}

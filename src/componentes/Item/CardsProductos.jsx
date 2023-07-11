@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
+import './CardProductos.css';
 
 const Item = ({ id, nombre, precio, img }) => {
   const [count, setCount] = useState(1);
@@ -17,7 +18,7 @@ const Item = ({ id, nombre, precio, img }) => {
   };
 
   return (
-    <Card className='card' style={{ width: '18rem' }}>
+    <Card className='card cardStile' style={{ width: '18rem' }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{nombre}</Card.Title>
