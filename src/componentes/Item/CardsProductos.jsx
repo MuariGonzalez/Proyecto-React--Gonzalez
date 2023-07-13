@@ -25,7 +25,7 @@ const Item = ({ id, nombre, precio, img }) => {
         <Card.Text>
           {precio}.
         </Card.Text>
-        <Link to={`/card/${id}`}>Ver Detalle</Link>
+        <Link to={`/item/${id}`}>Ver Detalle</Link>
         <div>
           Count: {count}
           <Button variant="outline-primary" onClick={decrementCount}>-</Button>

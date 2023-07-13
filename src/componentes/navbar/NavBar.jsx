@@ -10,7 +10,9 @@ const NavBar = () => {
     <Navbar bg="primary" variant="light">
       <Container className='nav'>
         <Navbar.Brand>
-          <Link className='' to="/">Afrodita SexShop</Link>
+          <Link className='' to="/">
+            <h1>Afrodita SexShop</h1>
+            </Link>
         </Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to="/categoria/lenceria">Lenceria</NavLink>
