@@ -1,9 +1,25 @@
+import { useContext, useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
+import {CarritoContext} from '../../context/CarritoContext'
 
-const ItemDetail = ({id,nombre, precio, Img}) => {
+const ItemDetail = ({id,nombre, precio, img, stock}) => {
+  
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+
+  const {agregarProducto} = useContext(CarritoContext);
+
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad);
+    console.log("Productos agregados: " + cantidad);
+    const item = {id, nombre, precio};
+    agregarProducto(item,cantidad)
+  }
+  
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={Img} />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title> {nombre} </Card.Title>
         <h2>ID: {id} </h2>
@@ -12,6 +28,11 @@ const ItemDetail = ({id,nombre, precio, Img}) => {
           bulk of the card's content.
         </Card.Text>
         <div > {precio} </div>
+        
+        {
+          agregarCantidad > 0 ? (<Link to="/cart">Terminar Compra</Link>) : <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+        }
+
       </Card.Body>
     </Card>
   );
