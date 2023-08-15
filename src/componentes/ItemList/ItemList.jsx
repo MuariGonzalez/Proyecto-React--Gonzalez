@@ -1,4 +1,5 @@
 import Item from "../Item/CardsProductos"
+import "./ItemList.css"
 
 
 const ItemList = ({productos}) => {

@@ -1,3 +1,30 @@
-.afrodita {
-    color : red
-}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .afrodita {
+    text-decoration: none;
+    color: #343a40;
+  }
+  
+  .afrodita h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .navegador {
+    color: #343a40;
+    text-decoration: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav-link.active {
+    color: #0d6efd;
+  }
+  

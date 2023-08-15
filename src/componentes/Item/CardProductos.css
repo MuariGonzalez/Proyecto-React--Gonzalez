@@ -1,6 +1,47 @@
-.cardStile{
+/* CardProductos.css */
+.card-container {
     display: flex;
-    display: inline-block;
-    border: 1px lightseagreen solid;
-    margin: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 18rem;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardStile {
+    /* Define tus estilos personalizados para la tarjeta */
+    background-color: #f9f9f9;
+    /* ... otros estilos ... */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
 }

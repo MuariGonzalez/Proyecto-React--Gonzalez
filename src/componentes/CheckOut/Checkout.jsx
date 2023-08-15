@@ -4,13 +4,14 @@ import { db } from "../../services/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import "./Checkout.css";
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [telefono, setTelefono] = useState("");
     const [email, setEmail] = useState("");
-    const [emaiConfirmacion, setEmailConfirmacion] = useState("");
+    const [emailConfirmacion, setEmailConfirmacion] = useState("");
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
 
@@ -19,12 +20,12 @@ const Checkout = () => {
     const manejadorFormulario = (event) => {
         event.preventDefault();
 
-        if(!nombre || !apellido || !telefono || !email || !emaiConfirmacion){
+        if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
             setError("Por favor completa todos los campos");
             return;
         }
 
-        if(email !== emaiConfirmacion) {
+        if(email !== emailConfirmacion) {
             setError("Verificar Email Confirmación, no coinciden. Por favor corregir para continuar.");
             return;
         }
@@ -48,17 +49,17 @@ const Checkout = () => {
                 setOrdenId(docRef.id);
                 vaciarCarrito();
             })
-            .catch(error =>{
+            .catch(error => {
                 console.log("Error al crear la orden, ", error);
-                setError("Se produjo un error al crear la orden. Intentalo nuevamente")
+                setError("Se produjo un error al crear la orden. Intentalo nuevamente");
             })
 
     }
 
     return(
-        <div>
-            <h2> Checkout </h2>
-            <Form onSubmit={manejadorFormulario}>
+        <div className="checkout-container">
+            <h2 className="checkout"> Checkout </h2>
+            <Form className="formulario" onSubmit={manejadorFormulario}>
                 {
                     carrito.map(producto => (
                         <div key={producto.item.id}>
@@ -92,12 +93,12 @@ const Checkout = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email confirmacion</Form.Label>
-                    <Form.Control type="email" value={emaiConfirmacion} onChange={(e)=> setEmailConfirmacion(e.target.value)} placeholder="Confirme email" />
+                    <Form.Label>Email confirmación</Form.Label>
+                    <Form.Control type="email" value={emailConfirmacion} onChange={(e)=> setEmailConfirmacion(e.target.value)} placeholder="Confirme email" />
                 </Form.Group>
 
                 {
-                    error && <p style={{color : "red"}}> {error} </p>
+                    error && <p className="mensajeError" style={{color : "red"}}> {error} </p>
                 }
                 <Button variant="primary" type="submit">
                     Finalizar Compra
@@ -105,7 +106,7 @@ const Checkout = () => {
             </Form>
             {
                 ordenId && (
-                    <strong>Gracias por tu compra. tu número de orden es {ordenId}
+                    <strong className="mensajeExitoso">Gracias por tu compra. tu número de orden es {ordenId}
                     </strong>
                 )
             }

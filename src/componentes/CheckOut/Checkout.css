@@ -1,0 +1,54 @@
+.checkout-container {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.checkout {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+.mensajeError {
+    color: red;
+    margin-top: 10px;
+}
+
+.mensajeExitoso {
+    color: green;
+    margin-top: 10px;
+}
+
+.formulario .mb-3 {
+    margin-bottom: 15px;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario p {
+    margin: 5px 0;
+}
+
+.formulario button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.formulario button[type="submit"]:hover {
+    background-color: #0056b3;
+}

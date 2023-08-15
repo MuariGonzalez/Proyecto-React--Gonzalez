@@ -1,0 +1,50 @@
+.cartContenedor {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.carritoVacio {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.linkProductos {
+    display: flex;
+    margin: 10px;
+    margin-left: 600px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 4px;
+    justify-content: center;
+}
+.checkoutLink {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.etiqueta {
+    font-size: 1.2rem;
+    margin: 15px;
+}
+
+.botonVaciar {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}

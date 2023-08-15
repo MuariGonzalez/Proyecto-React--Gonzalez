@@ -1,0 +1,4 @@
+.contProductos{
+    display: flex;
+    flex-wrap: wrap;
+}

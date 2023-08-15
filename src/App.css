@@ -1,5 +1,5 @@
-.card {
-    display: flex;
-    margin: 20px;
-    border: 50px;
-}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f54ec9;
+  }

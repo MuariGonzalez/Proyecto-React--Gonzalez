@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CarritoProvider } from "./context/CarritoContext";
 import Cart from "./componentes/Cart/Cart";
 import Checkout from "./componentes/CheckOut/Checkout";
+import "./App.css";
 
 const App = () => {
   return (
